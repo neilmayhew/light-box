@@ -1,0 +1,50 @@
+/* Stylesheet for Dominic's Light Box project */
+
+body {
+	background: black;
+	color: white;
+	font-family: palatino, serif;
+	text-align: center;
+}
+
+table {
+	border: 2px solid rgb(128, 175, 230);
+	border-collapse: collapse;
+	margin: auto;
+}
+
+td {
+	border: 1px solid rgb(64, 224, 208); /* turquoise */
+	padding: 0;
+	/*background: green;
+	color: red;
+	text-align: center;
+	font-family: comic sans ms, sans;
+	width: 36pt;
+	height: 36pt;*/
+}
+
+img {
+	vertical-align: top;
+}
+
+p.intro {
+	background: Blue;
+	color: white;
+	padding: 15pt;
+}
+
+.controls {
+	font-size: 200%;
+	font-weight: bold;
+}
+
+.controls span {
+	text-decoration: underline;
+}
+
+h1 {
+	color: white;
+	padding: 12pt;
+	margin: 12pt;
+}
