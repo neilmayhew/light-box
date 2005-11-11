@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<!--Says what the stylesheet is-->
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+		<script type="text/javascript" src="script.js"/>
+		<title>Dominic’s Light Box</title>
+	</head>
+	<body>
+		<h1>Dominic’s Light Box</h1>
+		<p class="intro">This is a fun game that I was given by my math teacher, Dr. Leavitt. See if you can get all
+			the lights to be off.<!--Makes a brake in the line-->
+			<br/>If you press one, it affects all the others around
+			it.</p>
+		<p class="controls">
+			<span onclick="reset()">Reset</span>
+			•
+			<span onclick="flipAll()">Flip All</span>
+		</p>
+		<div>
+			<table id="box">
+				<tr>
+					<td onclick="touch(1, 1)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(1, 2)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(1, 3)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(1, 4)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(1, 5)"><img src="light-box-on.png"/></td>
+				</tr>
+				<tr>
+					<td onclick="touch(2, 1)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(2, 2)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(2, 3)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(2, 4)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(2, 5)"><img src="light-box-on.png"/></td>
+				</tr>
+				<tr>
+					<td onclick="touch(3, 1)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(3, 2)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(3, 3)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(3, 4)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(3, 5)"><img src="light-box-on.png"/></td>
+				</tr>
+				<tr>
+					<td onclick="touch(4, 1)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(4, 2)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(4, 3)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(4, 4)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(4, 5)"><img src="light-box-on.png"/></td>
+				</tr>
+				<tr>
+					<td onclick="touch(5, 1)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(5, 2)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(5, 3)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(5, 4)"><img src="light-box-on.png"/></td>
+					<td onclick="touch(5, 5)"><img src="light-box-on.png"/></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

@@ -1,7 +1,25 @@
 /* JavaScript for Dominic's Light Box project*/
 
+/* Images used */
+imgOn  = "light-box-on.png";
+imgOff = "light-box-off.png";
+
+imgLoader = new Image(); imgLoader.src = imgOn;
+imgLoader = new Image(); imgLoader.src = imgOff;
+
+/* Solution array */
+clicks = new Array();
+for (var row = 1; row <= 5; ++row)
+{
+	clicks[row] = new Array();
+	for (var col = 1; col <= 5; ++col)
+	{
+		clicks[row][col] = 0;
+	}
+}
+
 /* Return the image at row, col */
-function img(row, col)
+function imgFor(row, col)
 {
 	var table = document.getElementById('box');
 	var cell = table.rows[row-1].cells[col-1];
@@ -14,16 +32,16 @@ function img(row, col)
 function get(row, col)
 {
 	/* Have to use search rather than ==, since src contains extra chars */
-	return img(row, col).src.search("light-box-on.png") >= 0;
+	return imgFor(row, col).src.search(imgOn) >= 0;
 }
 
 /* Set row, col to on if state is true, otherwise off */
 function set(row, col, state)
 {
 	if (state)
-		img(row, col).src = "light-box-on.png";
+		imgFor(row, col).src = imgOn;
 	else
-		img(row, col).src = "light-box-off.png";
+		imgFor(row, col).src = imgOff;
 }
 
 function flip(row, col)
@@ -45,9 +63,22 @@ function touch(row, col)
 		flip(row - 1, col);
 	if (col - 1 >= 1)
 		flip(row, col - 1);
+	clicks[row][col]++;
 	check();
 }
 
+
+function reset()
+{
+	for (var row = 1; row <= 5; ++row)
+	{
+		for (var col = 1; col <= 5; ++col)
+		{
+			set(row, col, true);
+			clicks[row][col] = 0;
+		}
+	}
+}
 function flipAll()
 {
 	for (var row = 1; row <= 5; ++row)
@@ -59,13 +90,13 @@ function flipAll()
 	}
 }
 
-function reset()
+function showHistory()
 {
 	for (var row = 1; row <= 5; ++row)
 	{
 		for (var col = 1; col <= 5; ++col)
 		{
-			set(row, col, true);
+			set(row, col, (clicks[row][col] % 2) == 1);
 		}
 	}
 }
